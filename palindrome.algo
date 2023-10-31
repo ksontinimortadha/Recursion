@@ -1,0 +1,24 @@
+FUNCTION isPalindrome(str:STRING) : BOOLEAN
+BEGIN    
+    IF (str="" OR str.length=1) THEN
+        RETURN true;
+    ELSE_IF (ToUpper(str[1]) <> ToUpper(str[str.length-1])) THEN
+        RETURN false;
+    ELSE
+        RETURN palindrome(copy(str,2,str.length-2));
+    END_IF
+END
+
+ALGORITHM palindrome
+VAR
+    str:STRING:="";
+BEGIN
+    write("str = ");
+    read(str);
+
+    IF (isPalindrome(str)) THEN
+        write(str," est palindrome");
+    ELSE
+        write(str," n'est pas palindrome");
+    END_IF
+END
