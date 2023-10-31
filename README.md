@@ -12,3 +12,7 @@ You can use the this program to check if a given string is a palindrome by follo
 
 ### Example
 Suppose you enter the string "kayak" as input. The program will display the following output:
+
+str = kayak
+
+kayak est palindrome
